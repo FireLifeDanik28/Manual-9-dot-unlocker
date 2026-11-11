@@ -1,1 +1,2 @@
-# Manual 9 dot unlocker
+Press esc to exit
+Press space to go to next code
