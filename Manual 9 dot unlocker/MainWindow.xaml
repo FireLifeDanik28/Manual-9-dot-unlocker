@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Manual_9_dot_unlocker"
         mc:Ignorable="d"
-        Title="Manual 9 dot pattern unlocker" Height="500" Foreground="#FFEEEEEE" BorderBrush="Black" Width="450" MinWidth="450" MinHeight="500" MaxWidth="450" MaxHeight="500" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        Title="Manual 9 dot pattern unlocker" Height="500" Foreground="#FF08CB00" BorderBrush="Black" Width="450" MinWidth="450" MinHeight="500" MaxWidth="450" MaxHeight="500" ScrollViewer.VerticalScrollBarVisibility="Disabled">
     <Window.Resources>
         <Style x:Key="FocusVisual">
             <Setter Property="Control.Template">
@@ -37,7 +37,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" CornerRadius="25" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                        <Border x:Name="border" CornerRadius="25" Background="{TemplateBinding Background}" BorderBrush="#FF08CB00" BorderThickness="4" SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </Border>
                         <ControlTemplate.Triggers>
@@ -45,17 +45,17 @@
                                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="#2f4858"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#00b55f"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="true">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                                <Setter Property="Background" TargetName="border" Value="#2f4858"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#00b55f"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                                <Setter Property="Background" TargetName="border" Value="#000000"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#08cb00"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="#08cb00"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -81,16 +81,16 @@
             <RowDefinition Height="150*"/>
             <RowDefinition Height="150*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="TitleLabel" Content="Click first dot" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" Foreground="#FFEEEEEE" Grid.ColumnSpan="3" Margin="10,0,0,0" />
-        <Button Panel.ZIndex="1" x:Name="Button1" FontSize="25" Width="50" Height="50" Content="1" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button1_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button2" FontSize="25" Width="50" Height="50" Content="2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button2_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button3" FontSize="25" Width="50" Height="50" Content="3" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button3_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button4" FontSize="25" Width="50" Height="50" Content="4" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button4_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button5" FontSize="25" Width="50" Height="50" Content="5" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button5_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button6" FontSize="25" Width="50" Height="50" Content="6" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button6_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button7" FontSize="25" Width="50" Height="50" Content="7" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button7_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button8" FontSize="25" Width="50" Height="50" Content="8" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button8_Click" />
-        <Button Panel.ZIndex="1" x:Name="Button9" FontSize="25" Width="50" Height="50" Content="9" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFEEEEEE" Click="Button9_Click" />
+        <Label x:Name="TitleLabel" Content="Click on the first dot" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" Foreground="#FFEEEEEE" Grid.ColumnSpan="3" Margin="10,0,0,0" />
+        <Button Panel.ZIndex="1" x:Name="Button1" FontSize="25" Width="50" Height="50" Content="1" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button1_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button2" FontSize="25" Width="50" Height="50" Content="2" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button2_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button3" FontSize="25" Width="50" Height="50" Content="3" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button3_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button4" FontSize="25" Width="50" Height="50" Content="4" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button4_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button5" FontSize="25" Width="50" Height="50" Content="5" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button5_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button6" FontSize="25" Width="50" Height="50" Content="6" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button6_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button7" FontSize="25" Width="50" Height="50" Content="7" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button7_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button8" FontSize="25" Width="50" Height="50" Content="8" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button8_Click" Background="Black" Foreground="#FF08CB00" />
+        <Button Panel.ZIndex="1" x:Name="Button9" FontSize="25" Width="50" Height="50" Content="9" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button9_Click" Background="Black" Foreground="#FF08CB00" />
         <Line x:Name="Line12" HorizontalAlignment="Center" VerticalAlignment="Center" X1="0" X2="100" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" Stroke="#08CB00" StrokeThickness="10" Visibility="Visible" />
         <Line x:Name="Line23" HorizontalAlignment="Center" VerticalAlignment="Center" X1="0" X2="100" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1" Stroke="#08CB00" StrokeThickness="10" Visibility="Visible" />
         <Line x:Name="Line45" HorizontalAlignment="Center" VerticalAlignment="Center" X1="0" X2="100" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="2" Stroke="#08CB00" StrokeThickness="10" Visibility="Visible" />
